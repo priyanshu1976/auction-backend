@@ -26,7 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
 const dataSchema = new mongoose_1.Schema({
     itemName: { type: String, require: true },
-    quantity: { type: String, require: true },
+    quantity: { type: Number, require: true },
 });
 const dataModel = mongoose_1.default.model("avaliable", dataSchema);
 exports.default = dataModel;
