@@ -13,7 +13,9 @@ const cors_1 = __importDefault(require("cors")); // Import CORS middleware
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)()); // Enable CORS for all routes
-mongoose_1.default.connect("mongodb://localhost:27017/auction").then(() => {
+mongoose_1.default
+    .connect("mongodb+srv://priyanshucto:WRfVzfHTFuFOUs6T@cluster0.55utm.mongodb.net/")
+    .then(() => {
     console.log("db connected");
 });
 app.get("/inventory", (req, res) => {

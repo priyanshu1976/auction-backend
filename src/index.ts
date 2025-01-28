@@ -10,9 +10,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS for all routes
 
-mongoose.connect("mongodb://localhost:27017/auction").then(() => {
-  console.log("db connected");
-});
+mongoose
+  .connect(
+    "mongodb+srv://priyanshucto:WRfVzfHTFuFOUs6T@cluster0.55utm.mongodb.net/"
+  )
+  .then(() => {
+    console.log("db connected");
+  });
 
 app.get("/inventory", (req, res) => {
   All.find()
